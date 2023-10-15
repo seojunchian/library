@@ -34,6 +34,7 @@ body{
     margin-right: 190px;
     border-radius: 10px;
     background-color: #dfe3ee;
+    cursor: pointer;
 }
 
 /* CONTENT */
@@ -78,7 +79,7 @@ body{
 .main > .form > .inputs > button{
     width: 158px;
     margin: 20px auto;
-    
+    cursor: pointer;
 }
 
 /* CHECKBOX */
