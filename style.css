@@ -65,21 +65,40 @@ body{
     justify-content: center;
 }
 
-
-.main > .form > .inputs > input,
-.main > .form > .inputs > button {
+.main > .form > .inputs > input{
     width: 150px;
     border: none;
     padding: 5px;
     margin: 5px auto;
+    text-align: center;
     background: #fff;
     border-radius: 10px;
 }
 
-.main > .form > .inputs > button{
+.main > .form > .inputs > #read{
     width: 158px;
-    margin: 20px auto;
+    padding: 5px;
+    border: none;
+    color: #fff;
     cursor: pointer;
+    margin: 5px auto;
+    background: #CD5C5C;
+    border-radius: 10px;
+}
+.main > .form > .inputs > #read:hover{
+    color: #fff;
+    transition: all 1s;
+    background-color: #06a94d;
+}
+
+.main > .form > .inputs > #btn-save{
+    width: 158px;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    margin: 15px auto;
+    background: #fff;
+    border-radius: 10px;
 }
 
 /* CHECKBOX */
