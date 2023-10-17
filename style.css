@@ -82,7 +82,7 @@ body{
     color: #fff;
     cursor: pointer;
     margin: 5px auto;
-    background: #CD5C5C;
+    background-color: #CD5C5C;
     border-radius: 10px;
 }
 .main > .form > .inputs > #read:hover{
@@ -99,14 +99,6 @@ body{
     margin: 15px auto;
     background: #fff;
     border-radius: 10px;
-}
-
-/* CHECKBOX */
-.main > .form > .inputs > .check{
-    width: 158px;
-    text-align: center;
-    border: none;
-    margin-top: 5px;
 }
 
 /* MYSELF */
