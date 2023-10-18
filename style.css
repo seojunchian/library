@@ -77,22 +77,6 @@ body{
     border-radius: 10px;
 }
 
-.main > form > .inputs > #input-book-read-info{
-    width: 158px;
-    padding: 5px;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    margin: 5px auto;
-    border-radius: 10px;
-    background-color: #CD5C5C;
-}
-.main > form > .inputs > #input-book-read-info:hover{
-    color: #fff;
-    transition: all 1s;
-    background-color: #06a94d;
-}
-
 .main > form > .inputs > #input-btn-save{
     width: 158px;
     border: none;
