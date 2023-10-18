@@ -4,7 +4,7 @@ const inputBookAuthor = document.getElementById("input-book-author");
 const inputBookPageNumber = document.getElementById("input-book-pages");
 const inputBookReadInfo = document.getElementById("input-book-read-info");
 
-/* TABLE */
+/* Table */
 const formHTMLElement = document.getElementById("form");
 const tableElement = document.createElement("table");
 tableElement.style.width = "60%";
@@ -13,9 +13,30 @@ tableElement.style.textAlign = "center";
 tableElement.style.borderRadius = "10px";
 formHTMLElement.appendChild(tableElement);
 
-/* Save Button */
+/* Buttons */
+/* Save */
 const inputSaveButton = document.getElementById("input-btn-save");
 inputSaveButton.addEventListener("click", addbook);
+
+/* Connect to MetaMask */
+const connectMetaMaskButton = document.getElementById("metamask");
+connectMetaMaskButton.addEventListener("click", () => {
+
+})
+
+/* Connect to Contract */
+const connectContractButton = document.getElementById("contract");
+connectMetaMaskButton.addEventListener("click", () => {
+    
+})
+
+
+/* Get Data from Contract */
+const GetDataContractButton = document.getElementById("data");
+connectMetaMaskButton.addEventListener("click", () => {
+    
+})
+
 
 /* Add Book */
 function addbook() {
@@ -27,7 +48,7 @@ function addbook() {
     }
 }
 
-/* Table Part and Table Head Part */
+/* Table and Table Head */
 function addHead() {
     const tableHeadElement = document.createElement("thead");
     tableElement.appendChild(tableHeadElement);
@@ -36,22 +57,27 @@ function addHead() {
     for(let i=0; i<5; i++) {
         const tableHeadTrTdElement = document.createElement("td");
         if(i==0){
+            tableHeadTrTdElement.style.width = "20%";
             tableHeadTrTdElement.style.border = "1px solid black";
             tableHeadTrTdElement.style.borderRadius = "5px";
             tableHeadTrTdElement.innerHTML = "Title";
         } else if(i==1){
+            tableHeadTrTdElement.style.width = "20%";
             tableHeadTrTdElement.style.border = "1px solid black";
             tableHeadTrTdElement.style.borderRadius = "5px";
             tableHeadTrTdElement.innerHTML = "Author";
         } else if(i==2){
+            tableHeadTrTdElement.style.width = "20%";
             tableHeadTrTdElement.style.border = "1px solid black";
             tableHeadTrTdElement.style.borderRadius = "5px";
             tableHeadTrTdElement.innerHTML = "Page";
         } else if(i==3){
+            tableHeadTrTdElement.style.width = "20%";
             tableHeadTrTdElement.style.border = "1px solid black";
             tableHeadTrTdElement.style.borderRadius = "5px";
             tableHeadTrTdElement.innerHTML = "Read";
         } else if(i==4){
+            tableHeadTrTdElement.style.width = "20%";
             tableHeadTrTdElement.style.border = "1px solid black";
             tableHeadTrTdElement.style.borderRadius = "5px";
             tableHeadTrTdElement.innerHTML = "Options";
@@ -71,21 +97,21 @@ function addBody() {
         if(i==0){
             tableBodyTrTdElement.style.border = "1px solid black";
             tableBodyTrTdElement.style.borderRadius = "5px";
-            tableBodyTrTdElement.style.width = "22%";
+            tableBodyTrTdElement.style.width = "20%";
             tableBodyTrTdElement.innerHTML = inputBookTitle.value;
         } else if(i==1){
             tableBodyTrTdElement.style.border = "1px solid black";
             tableBodyTrTdElement.style.borderRadius = "5px";
-            tableBodyTrTdElement.style.width = "22%";
+            tableBodyTrTdElement.style.width = "20%";
             tableBodyTrTdElement.innerHTML = inputBookAuthor.value;
         } else if(i==2){
             tableBodyTrTdElement.style.border = "1px solid black";
             tableBodyTrTdElement.style.borderRadius = "5px";
-            tableBodyTrTdElement.style.Width = "22%";
+            tableBodyTrTdElement.style.width = "20%";
             tableBodyTrTdElement.innerHTML = inputBookPageNumber.value;
         } else if(i==3){
             /* TD */
-            tableBodyTrTdElement.style.width = "22%";
+            tableBodyTrTdElement.style.width = "20%";
             tableBodyTrTdElement.style.borderRadius = "5px";
             tableBodyTrTdElement.style.border = "1px solid black";
             /* BUTTON */
@@ -95,15 +121,15 @@ function addBody() {
             tableBodyTrButtonElement.style.border = "none";
             tableBodyTrButtonElement.style.cursor = "pointer";
             tableBodyTrButtonElement.style.borderRadius = "5px";
-            tableBodyTrButtonElement.style.backgroundColor = "#CD5C5C";
+            tableBodyTrButtonElement.style.backgroundColor = "rgb(205, 92, 92)";
             tableBodyTrButtonElement.innerHTML = "haven't";
             /* PRESS BUTTON */
             tableBodyTrButtonElement.addEventListener("click", () => {
-                if(tableBodyTrButtonElement.style.backgroundColor == "#CD5C5C") {
-                    tableBodyTrButtonElement.style.backgroundColor = "#06a94d";
+                if(tableBodyTrButtonElement.style.backgroundColor == "rgb(205, 92, 92)") {
+                    tableBodyTrButtonElement.style.backgroundColor = "rgb(6, 169, 77)";
                     tableBodyTrButtonElement.innerHTML = "have";
-                } else if(tableBodyTrButtonElement.style.backgroundColor == "#06a94d") {
-                    tableBodyTrButtonElement.style.backgroundColor = "#CD5C5C";
+                } else if(tableBodyTrButtonElement.style.backgroundColor === "rgb(6, 169, 77)") {
+                    tableBodyTrButtonElement.style.backgroundColor = "rgb(205, 92, 92)";
                     tableBodyTrButtonElement.innerHTML = "haven't";
                 }
             });
@@ -111,20 +137,19 @@ function addBody() {
             tableBodyTrTdElement.appendChild(tableBodyTrButtonElement);
         } else if(i==4){
             /* TD */
-            tableBodyTrTdElement.style.width = "12%";
-            tableBodyTrTdElement.style.borderRadius = "5px";
+            tableBodyTrTdElement.style.width = "20%";
             tableBodyTrTdElement.style.border = "1px solid black";
             /* BUTTON */
             const tableBodyTrButtonElement = document.createElement("button");
             tableBodyTrButtonElement.setAttribute("type", "button");
-            tableBodyTrButtonElement.style.width = "15%";
             tableBodyTrButtonElement.style.border = "none";
             tableBodyTrButtonElement.style.cursor = "pointer";
-            tableBodyTrButtonElement.style.borderRadius = "15px";
             tableBodyTrButtonElement.style.backgroundColor = "#fff";
             tableBodyTrButtonElement.innerHTML = "🗑️";
             /* PRESS BUTTON */
-            //tableBodyTrButtonElement.addEventListener("click");
+            tableBodyTrButtonElement.addEventListener("click", () => {
+                tableBodyTrElement.remove();
+            });
             /* ADD */
             tableBodyTrTdElement.appendChild(tableBodyTrButtonElement);
         }
