@@ -18,23 +18,36 @@ body{
 }
 
 /* NAVBAR TEXT */
-.nav > h1{
+.nav > .header > h1{
     font-size: 40px;
     color: #003333;
     font-weight:bolder;
     margin-left: 190px;
 }
 
-/* LOG IN BUTTON */
+/* LOG IN DIV */
 .nav > .login{
-    width: 80px;
+    display: flex;
+    text-align: center;
+    margin-right: 190px;
+    justify-content: space-between;
+}
+
+/* LOG IN BUTTON */
+.nav > .login > .btn-login{
+    width: 100px;
     border: none;
+    cursor: pointer;
     font-size: 20px;
     font-weight: 500;
-    margin-right: 190px;
     border-radius: 10px;
     background-color: #dfe3ee;
-    cursor: pointer;
+}
+
+/* ADDRESS HEADER */
+.nav > .login > h2{
+    width: 100px;
+    margin: 8px 150px 0 50px;
 }
 
 /* CONTENT */
@@ -58,7 +71,7 @@ body{
     text-align: center;
 }
 
-/* INPUTS */
+/* INPUT DIV */
 .main > form > .inputs{
     width: 200px;
     display: flex;
@@ -67,6 +80,7 @@ body{
     justify-content: center;
 }
 
+/* INPUTS */
 .main > form > .inputs > input{
     width: 150px;
     border: none;
@@ -77,6 +91,7 @@ body{
     border-radius: 10px;
 }
 
+/* SAVE BUTTON */
 .main > form > .inputs > #input-btn-save{
     width: 158px;
     border: none;
