@@ -9,7 +9,7 @@ body{
     background:	#dfe3ee;
 }
 
-/* NAVBAR */
+/* Nav-Bar */
 .nav{
     display: flex;
     background: #fff;
@@ -17,47 +17,53 @@ body{
     justify-content: space-between;
 }
 
-/* NAVBAR TEXT */
-.nav > .header > h1{
+/* Nav-Bar Text */
+.nav > h1{
+    width: 150px;
     font-size: 40px;
     color: #003333;
-    font-weight:bolder;
-    margin-left: 190px;
+    text-align: center;
+    position: relative;
+    left: 100px;
 }
 
-/* LOG IN DIV */
+/* Log in Div */
 .nav > .login{
     display: flex;
-    text-align: center;
-    margin-right: 190px;
     justify-content: space-between;
+    position: relative;
+    right: 80px;
 }
 
-/* LOG IN BUTTON */
-.nav > .login > .btn-login{
+/* Address Header */
+.nav > .login > .ethAccInfos > #ethAccAddress{
+    width: 600px;
+}
+
+/* Balance Header */
+.nav > .login > .ethAccInfos > #ethAccBalance{
+    width: 600px;
+}
+
+/* Log in Button */
+.nav > .login > #btn-login{
     width: 100px;
     border: none;
     cursor: pointer;
     font-size: 20px;
-    font-weight: 500;
+    margin-right: 40px;
     border-radius: 10px;
     background-color: #dfe3ee;
 }
 
-/* ADDRESS HEADER */
-.nav > .login > h2{
-    width: 100px;
-    margin: 8px 150px 0 50px;
-}
-
-/* CONTENT */
+/* Content */
 .main{
     display: flex;
     flex-direction: column;
     background-color: #dfe3ee;
 }
 
-/* FORM */
+/* Form */
 .main > form{
     display: flex;
     align-items: center;
@@ -65,13 +71,13 @@ body{
     margin-top: 10px;
 }
 
-/* HEADER */
+/* Header */
 .main > form > label{
     font-size: 30px;
     text-align: center;
 }
 
-/* INPUT DIV */
+/* Input Div */
 .main > form > .inputs{
     width: 200px;
     display: flex;
@@ -80,7 +86,7 @@ body{
     justify-content: center;
 }
 
-/* INPUTS */
+/* Inputs */
 .main > form > .inputs > input{
     width: 150px;
     border: none;
@@ -91,7 +97,7 @@ body{
     border-radius: 10px;
 }
 
-/* SAVE BUTTON */
+/* Save Button */
 .main > form > .inputs > #input-btn-save{
     width: 158px;
     border: none;
@@ -102,7 +108,7 @@ body{
     border-radius: 10px;
 }
 
-/* MYSELF */
+/* Representation */
 .footer{
     bottom: 0;
     width: 100%;
