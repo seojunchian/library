@@ -2,7 +2,9 @@
 const inputBookTitle = document.getElementById("input-book-title");
 const inputBookAuthor = document.getElementById("input-book-author");
 const inputBookPageNumber = document.getElementById("input-book-pages");
-const inputBookReadInfo = document.getElementById("input-book-read-info");
+
+const ethAccAddress = document.getElementById("ethAccAddress");
+const ethAccBalance = document.getElementById("ethAccBalance");
 
 /* Table */
 const formHTMLElement = document.getElementById("form");
@@ -19,37 +21,48 @@ const inputSaveButton = document.getElementById("input-btn-save");
 inputSaveButton.addEventListener("click", addbook);
 
 /* Connect to MetaMask */
-const connectMetaMaskButton = document.getElementById("metamask");
-connectMetaMaskButton.addEventListener("click", () => {
+const connectMetaMaskButton = document.getElementById("btn-login");
+connectMetaMaskButton.addEventListener("click", event => {
+    let account;
+    ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
+        account = accounts[0];
+        ethAccAddress.innerHTML = `Address: ${account}`;
 
-})
+        ethereum.request({method: "eth_getBalance", params: [account, "latest"]}).then(result => {
+            let wei = parseInt(result, 16);
+            let balance = wei / (10**18);
+            ethAccBalance.innerHTML = `Balance: ${balance} ETH`;
+        });
+        tableHeadPart();
+        // body part varsa gelicek
+        tableBodyPart();
+    });
+});
 
-/* Connect to Contract */
-const connectContractButton = document.getElementById("contract");
-connectMetaMaskButton.addEventListener("click", () => {
-    
-})
+/*
+account0: {
+    address: ethAccAddress.value,
+    title: inputBookTitle.value,
+    author: inputBookAuthor.value,
+    pageNumber: inputBookPageNumber.value
+}
+*/
 
-
-/* Get Data from Contract */
-const GetDataContractButton = document.getElementById("data");
-connectMetaMaskButton.addEventListener("click", () => {
-    
-})
-
+const bookShelter = {
+}
 
 /* Add Book */
 function addbook() {
     if(!tableElement.hasChildNodes()){
-        addHead();
-        addBody();
+        tableHeadPart();
+        tableBodyPart();
     } else {
-        addBody();
+        tableBodyPart();
     }
 }
 
 /* Table and Table Head */
-function addHead() {
+function tableHeadPart() {
     const tableHeadElement = document.createElement("thead");
     tableElement.appendChild(tableHeadElement);
     const tableHeadTrElement = document.createElement("tr");
@@ -87,7 +100,7 @@ function addHead() {
 }
 
 /* Table Body Part */
-function addBody() {
+function tableBodyPart() {
     const tableBodyElement = document.createElement("tbody");
     tableElement.appendChild(tableBodyElement);
     const tableBodyTrElement = document.createElement("tr");
