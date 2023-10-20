@@ -33,20 +33,8 @@ connectMetaMaskButton.addEventListener("click", event => {
             let balance = wei / (10**18);
             ethAccBalance.innerHTML = `Balance: ${balance} ETH`;
         });
-        tableHeadPart();
-        // body part varsa gelicek
-        tableBodyPart();
     });
 });
-
-/*
-account0: {
-    address: ethAccAddress.value,
-    title: inputBookTitle.value,
-    author: inputBookAuthor.value,
-    pageNumber: inputBookPageNumber.value
-}
-*/
 
 const bookShelter = {
 }
@@ -100,7 +88,7 @@ function tableHeadPart() {
 }
 
 /* Table Body Part */
-function tableBodyPart() {
+function tableBodyPart(account) {
     const tableBodyElement = document.createElement("tbody");
     tableElement.appendChild(tableBodyElement);
     const tableBodyTrElement = document.createElement("tr");
