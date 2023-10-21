@@ -17,30 +17,32 @@ formHTMLElement.appendChild(tableElement);
 
 /* Buttons */
 /* Save */
-const inputSaveButton = document.getElementById("input-btn-save");
-inputSaveButton.addEventListener("click", addbook);
+$("#input-btn-save").click(addbook);
 
 /* Connect to MetaMask */
-const connectMetaMaskButton = document.getElementById("btn-login");
-connectMetaMaskButton.addEventListener("click", event => {
-    let account;
-    ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
-        account = accounts[0];
-        ethAccAddress.innerHTML = `Address: ${account}`;
-
-        ethereum.request({method: "eth_getBalance", params: [account, "latest"]}).then(result => {
-            let wei = parseInt(result, 16);
-            let balance = wei / (10**18);
-            ethAccBalance.innerHTML = `Balance: ${balance} ETH`;
+$("#btn-login").click(
+    event => {
+        let account;
+        ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
+            account = accounts[0];
+            ethAccAddress.innerHTML = `Address: ${account}`;
+    
+            ethereum.request({method: "eth_getBalance", params: [account, "latest"]}).then(result => {
+                let wei = parseInt(result, 16);
+                let balance = wei / (10**18);
+                ethAccBalance.innerHTML = `Balance: ${balance} ETH`;
+            });
         });
-    });
-});
+    }
+)
 
 const bookShelter = {
 }
 
 /* Add Book */
 function addbook() {
+    // gives error cant use 2 function after "?" idk why
+    // !tableElement.hasChildNodes() ? tableHeadPart() tableBodyPart() : tableBodyPart();
     if(!tableElement.hasChildNodes()){
         tableHeadPart();
         tableBodyPart();
