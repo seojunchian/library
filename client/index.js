@@ -36,9 +36,6 @@ $("#btn-login").click(
     }
 )
 
-const bookShelter = {
-}
-
 /* Add Book */
 function addbook() {
     // gives error cant use 2 function after "?" idk why
@@ -97,26 +94,16 @@ function tableBodyPart(account) {
     tableBodyElement.appendChild(tableBodyTrElement);
     for(let i=0; i<5; i++) {
         const tableBodyTrTdElement = document.createElement("td");
+        tableBodyTrTdElement.style.border = "1px solid black";
+        tableBodyTrTdElement.style.borderRadius = "5px";
+        tableBodyTrTdElement.style.width = "20%";
         if(i==0){
-            tableBodyTrTdElement.style.border = "1px solid black";
-            tableBodyTrTdElement.style.borderRadius = "5px";
-            tableBodyTrTdElement.style.width = "20%";
             tableBodyTrTdElement.innerHTML = inputBookTitle.value;
         } else if(i==1){
-            tableBodyTrTdElement.style.border = "1px solid black";
-            tableBodyTrTdElement.style.borderRadius = "5px";
-            tableBodyTrTdElement.style.width = "20%";
             tableBodyTrTdElement.innerHTML = inputBookAuthor.value;
         } else if(i==2){
-            tableBodyTrTdElement.style.border = "1px solid black";
-            tableBodyTrTdElement.style.borderRadius = "5px";
-            tableBodyTrTdElement.style.width = "20%";
             tableBodyTrTdElement.innerHTML = inputBookPageNumber.value;
         } else if(i==3){
-            /* TD */
-            tableBodyTrTdElement.style.width = "20%";
-            tableBodyTrTdElement.style.borderRadius = "5px";
-            tableBodyTrTdElement.style.border = "1px solid black";
             /* BUTTON */
             const tableBodyTrButtonElement = document.createElement("button");
             tableBodyTrButtonElement.setAttribute("type", "button");
@@ -139,9 +126,6 @@ function tableBodyPart(account) {
             /* ADD */
             tableBodyTrTdElement.appendChild(tableBodyTrButtonElement);
         } else if(i==4){
-            /* TD */
-            tableBodyTrTdElement.style.width = "20%";
-            tableBodyTrTdElement.style.border = "1px solid black";
             /* BUTTON */
             const tableBodyTrButtonElement = document.createElement("button");
             tableBodyTrButtonElement.setAttribute("type", "button");
@@ -159,4 +143,3 @@ function tableBodyPart(account) {
         tableBodyTrElement.appendChild(tableBodyTrTdElement);
     }
 }
-//inputBookTitle.value.length == 0
