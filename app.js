@@ -1,10 +1,7 @@
-import jsonFormatData from "./data.json" assert {type: 'json'};
-
 /* Input Elements */
 const inputBookTitle = document.getElementById("input-book-title");
 const inputBookAuthor = document.getElementById("input-book-author");
 const inputBookPageNumber = document.getElementById("input-book-pages");
-
 const ethAccAddress = document.getElementById("ethAccAddress");
 const ethAccBalance = document.getElementById("ethAccBalance");
 
@@ -18,11 +15,8 @@ tableElement.style.borderRadius = "10px";
 formHTMLElement.appendChild(tableElement);
 
 /* Buttons */
-/* Save */
-$("#input-btn-save").click(addbook);
-
 /* Connect to MetaMask */
-$("#btn-login").click(
+document.getElementById("btn-login").addEventListener("click", () => {
     event => {
         let account;
         ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
@@ -36,16 +30,19 @@ $("#btn-login").click(
             });
         });
     }
-)
+})
+
+/* Save */
+document.getElementById("input-btn-save").addEventListener("click", addbook);
 
 /* Add Book */
 function addbook() {
-    const objectFormatData = JSON.stringify(jsonFormatData);
-    objectFormatData.account = ethAccAddress.value;
-    account.title = inputBookTitle.value;
-    account.author = inputBookAuthor.value;
-    account.inputBookPageNumber = inputBookPageNumber.value;
-    const jsonFormatData = JSON.parse(objectFormatData);
+    if(!tableElement.hasChildNodes()) {
+        tableHeadPart();
+        tableBodyPart();
+    } else {
+        tableBodyPart();
+    }
 }
 
 /* Table and Table Head */
@@ -87,7 +84,7 @@ function tableHeadPart() {
 }
 
 /* Table Body Part */
-function tableBodyPart(account) {
+function tableBodyPart() {
     const tableBodyElement = document.createElement("tbody");
     tableElement.appendChild(tableBodyElement);
     const tableBodyTrElement = document.createElement("tr");
