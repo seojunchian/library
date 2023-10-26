@@ -1,4 +1,4 @@
-const dataJson = require("./data.json");
+import jsonFormatData from "./data.json" assert {type: 'json'};
 
 /* Input Elements */
 const inputBookTitle = document.getElementById("input-book-title");
@@ -41,7 +41,11 @@ $("#btn-login").click(
 /* Add Book */
 function addbook() {
     const objectFormatData = JSON.stringify(jsonFormatData);
-    console.log(objectFormatData);
+    objectFormatData.account = ethAccAddress.value;
+    account.title = inputBookTitle.value;
+    account.author = inputBookAuthor.value;
+    account.inputBookPageNumber = inputBookPageNumber.value;
+    const jsonFormatData = JSON.parse(objectFormatData);
 }
 
 /* Table and Table Head */
