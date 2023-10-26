@@ -1,3 +1,5 @@
+const dataJson = require("./data.json");
+
 /* Input Elements */
 const inputBookTitle = document.getElementById("input-book-title");
 const inputBookAuthor = document.getElementById("input-book-author");
@@ -38,14 +40,8 @@ $("#btn-login").click(
 
 /* Add Book */
 function addbook() {
-    // gives error cant use 2 function after "?" idk why
-    // !tableElement.hasChildNodes() ? tableHeadPart() tableBodyPart() : tableBodyPart();
-    if(!tableElement.hasChildNodes()){
-        tableHeadPart();
-        tableBodyPart();
-    } else {
-        tableBodyPart();
-    }
+    const objectFormatData = JSON.stringify(jsonFormatData);
+    console.log(objectFormatData);
 }
 
 /* Table and Table Head */
