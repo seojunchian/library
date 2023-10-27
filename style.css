@@ -98,7 +98,7 @@ body{
 }
 
 /* Save Button */
-.main > form > .inputs > #input-btn-save{
+.main > form > .inputs > #btn-save{
     width: 158px;
     border: none;
     padding: 5px;
@@ -109,7 +109,7 @@ body{
     border-radius: 10px;
 }
 
-.main > #btn-show{
+.main > form > .inputs > #btn-show{
     width: 158px;
     border: none;
     padding: 5px;

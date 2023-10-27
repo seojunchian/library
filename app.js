@@ -5,6 +5,27 @@ const inputBookPageNumber = document.getElementById("input-book-pages");
 const ethAccAddress = document.getElementById("ethAccAddress");
 const ethAccBalance = document.getElementById("ethAccBalance");
 
+/* Buttons */
+/* Connect to MetaMask */
+document.getElementById("btn-login").addEventListener("click", event => {
+    let account;
+    ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
+        account = accounts[0];
+        ethAccAddress.innerHTML = `Address: ${account}`;
+        ethereum.request({method: "eth_getBalance", params: [account, "latest"]}).then(result => {
+            let wei = parseInt(result, 16);
+            let balance = wei / (10**18);
+            ethAccBalance.innerHTML = `Balance: ${balance} ETH`;
+        });
+    });
+});
+
+/* Save Data */
+document.getElementById("btn-save").addEventListener("click", addBook);
+
+/* Show Data */
+document.getElementById("btn-show").addEventListener("click", showBook);
+
 /* Table */
 const formHTMLElement = document.getElementById("form");
 const tableElement = document.createElement("table");
@@ -14,29 +35,11 @@ tableElement.style.textAlign = "center";
 tableElement.style.borderRadius = "10px";
 formHTMLElement.appendChild(tableElement);
 
-/* Buttons */
-/* Connect to MetaMask */
-document.getElementById("btn-login").addEventListener("click", () => {
-    event => {
-        let account;
-        ethereum.request({method: "eth_requestAccounts"}).then(accounts => {
-            account = accounts[0];
-            ethAccAddress.innerHTML = `Address: ${account}`;
-    
-            ethereum.request({method: "eth_getBalance", params: [account, "latest"]}).then(result => {
-                let wei = parseInt(result, 16);
-                let balance = wei / (10**18);
-                ethAccBalance.innerHTML = `Balance: ${balance} ETH`;
-            });
-        });
-    }
-})
-
-/* Save */
-document.getElementById("input-btn-save").addEventListener("click", addbook);
-
 /* Add Book */
-function addbook() {
+function addBook() {}
+
+/* Show Book */
+function showBook() {
     if(!tableElement.hasChildNodes()) {
         tableHeadPart();
         tableBodyPart();
