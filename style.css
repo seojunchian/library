@@ -109,16 +109,6 @@ body{
     border-radius: 10px;
 }
 
-.main > form > .inputs > #btn-show{
-    width: 158px;
-    border: none;
-    padding: 5px;
-    cursor: pointer;
-    margin: 20px auto;
-    background: #fff;
-    border-radius: 10px;
-}
-
 /* Representation */
 .footer{
     bottom: 0;

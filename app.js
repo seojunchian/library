@@ -1,6 +1,3 @@
-import data from "../data.json" assert { type: "json" };
-const fs = require("fs");
-
 /* Input Elements */
 const inputBookTitle = document.getElementById("input-book-title");
 const inputBookAuthor = document.getElementById("input-book-author");
@@ -26,9 +23,6 @@ document.getElementById("btn-login").addEventListener("click", event => {
 /* Save Data */
 document.getElementById("btn-save").addEventListener("click", addBook);
 
-/* Show Data */
-document.getElementById("btn-show").addEventListener("click", showBook);
-
 /* Table */
 const formHTMLElement = document.getElementById("form");
 const tableElement = document.createElement("table");
@@ -40,18 +34,6 @@ formHTMLElement.appendChild(tableElement);
 
 /* Add Book */
 function addBook() {
-    let jsonFormatData = fs.readFileSync("data.json");
-    let objectFormatData = JSON.parse(jsonFormatData);
-    objectFormatData.account = ethAccAddress.textContent;
-    account.title = inputBookTitle.value;
-    title.author = inputBookAuthor.value;
-    title.pages = inputBookPageNumber.value;
-    jsonFormatData = JSON.stringify(objectFormatData, null, 2);
-    fs.writeFileSync("data.json", jsonFormatData);
-}
-
-/* Show Book */
-function showBook() {
     if(!tableElement.hasChildNodes()) {
         tableHeadPart();
         tableBodyPart();
