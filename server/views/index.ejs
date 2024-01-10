@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link href="./stylesheets/style.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="nav">
+			<h1>library</h1>
+			<div class="login">
+				<button id="btn-login">Log in</button>
+				<div class="accInfos">
+					<h2 id="accAddress">Address:</h2>
+					<h2 id="accBalance">Balance:</h2>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<form id="form">
+				<label>Add book</label>
+				<div class="inputs">
+					<input
+						id="input-book-title"
+						type="text"
+						placeholder="Title"
+					/>
+					<input
+						id="input-book-author"
+						type="text"
+						placeholder="Author"
+					/>
+					<input
+						id="input-book-pages"
+						type="number"
+						placeholder="Pages"
+					/>
+					<button id="btn-save" type="button">Save</button>
+				</div>
+			</form>
+		</div>
+		<div class="footer">Copyright © github.com/seojunchian</div>
+		<script type="module" src="./javascripts/script.js"></script>
+	</body>
+</html>
