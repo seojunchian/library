@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+			integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link href="./stylesheets/add.css" rel="stylesheet" />
+	</head>
+	<body>
+		<div class="header">
+			<div class="header-title">
+				<img
+					src="https://img.freepik.com/premium-photo/books-with-stairs-sky-with-cloudsgenerative-ai_391052-11895.jpg"
+				/>
+				<div class="header-title-texts">
+					<h1>Librarian</h1>
+					<h6>add and explore books you're looking for</h6>
+				</div>
+			</div>
+			<div class="header-nav">
+				<button id="header-nav-home" type="button">Home</button>
+				<button id="header-nav-see" type="button">Books</button>
+			</div>
+		</div>
+		<div class="main">
+			<form class="main-form_search" method="post">
+				<input name="main_form_search_input" id="main-form-input" />
+				<button id="main-form_search-button" type="submit">
+					Search
+				</button>
+			</form>
+			<form class="main-form_add" method="post">
+				<div class="main-form_add-title">
+					<p>Add book</p>
+				</div>
+				<div class="main-form_add-inputs">
+					<input
+						id="main-form_add-inputs-title"
+						name="main_form_add_inputs_title"
+						type="text"
+						placeholder="Title"
+					/>
+					<input
+						id="main-form_add-inputs-author"
+						name="main_form_add_inputs_author"
+						type="text"
+						placeholder="Author"
+					/>
+					<input
+						id="main-form_add-inputs-page"
+						name="main_form_add_inputs_page"
+						type="number"
+						placeholder="Pages"
+					/>
+					<button
+						id="main-form_add-inputs-read"
+						name="main_form_add_inputs_read"
+						type="button"
+					>
+						Read
+					</button>
+				</div>
+				<div class="main-form_add-buttons">
+					<button id="main-form_add-buttons-save" type="submit">
+						Save
+					</button>
+				</div>
+			</form>
+			<table class="main-table">
+				<thead>
+					<tr>
+						<td>Name</td>
+						<td>Author</td>
+						<td>Pages</td>
+						<td>Read</td>
+						<td>Edit</td>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>1984</td>
+						<td>George Orwell</td>
+						<td>244</td>
+						<td><button>Read</button></td>
+						<td>
+							<button><i class="fa-solid fa-trash"></i></button>
+						</td>
+					</tr>
+					<tr>
+						<td>The Prince</td>
+						<td>Niccolo Machiavelli</td>
+						<td>164</td>
+						<td><button>Read</button></td>
+						<td>
+							<button><i class="fa-solid fa-trash"></i></button>
+						</td>
+					</tr>
+					<tr>
+						<td>Crime and Punishment</td>
+						<td>Fyodor Dostoyevsky</td>
+						<td>527</td>
+						<td><button>Read</button></td>
+						<td>
+							<button><i class="fa-solid fa-trash"></i></button>
+						</td>
+					</tr>
+					<tr>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+					<tr>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+					<tr>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+						<td>...</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="footer">Copyright © github.com/seojunchian</div>
+		<script type="module" src="./javascripts/add.js"></script>
+	</body>
+</html>

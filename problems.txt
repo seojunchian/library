@@ -1,0 +1,13 @@
+/add
+  html
+    form
+      add warning if inputs leaved unfill
+      pages input dont need arrows at end - remove
+    table 
+      read button
+      delete button
+/
+  * if table doesnt overrun the page with creating a scroller stick footer to the bottom
+  - $(document).ready(() => {
+	    if ($("body").height() > $(window).height()) console.log("a");
+    });

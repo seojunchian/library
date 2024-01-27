@@ -1,0 +1,108 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Poppins";
+}
+
+body {
+	background: #50623a;
+}
+
+.header {
+	display: flex;
+	background: #dbe7c9;
+	padding: 20px;
+}
+
+.header .header-title {
+	display: flex;
+	align-items: center;
+	margin-left: 40px;
+}
+
+.header .header-title img {
+	height: 100px;
+}
+
+.header .header-title .header-title-texts {
+	width: 200px;
+	color: #294b29;
+	margin-left: 10px;
+}
+
+.header * {
+	font-family: "Josefin Slab";
+}
+
+.header .header-title .header-title-texts h1 {
+	font-size: 3.2em;
+	font-weight: 500;
+}
+
+.header .header-title .header-title-texts h6 {
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+.header .header-nav {
+	display: flex;
+	align-items: center;
+	margin-left: 175px;
+}
+
+.header .header-nav button {
+	margin: auto 10px;
+	width: 150px;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+.main {
+}
+
+.main table {
+	text-align: center;
+	margin: 40px auto;
+	width: 70%;
+}
+
+.main table thead {
+	background: #294b29;
+}
+
+.main table thead tr {
+}
+
+.main table thead tr td {
+	font-weight: 600;
+}
+
+.main table tbody {
+	background: #dbe7c9;
+}
+
+.main table tbody tr {
+}
+
+.main table tbody tr td {
+}
+
+.main table tbody tr td button {
+	background: none;
+	border: none;
+	cursor: pointer;
+}
+
+#footer {
+	width: 100%;
+	text-align: center;
+	font-size: 1.4em;
+	color: #dbe7c9;
+	background: #294b29;
+}

@@ -4,43 +4,48 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Document</title>
-		<link href="./stylesheets/style.css" rel="stylesheet" />
+		<link href="./stylesheets/index.css" rel="stylesheet" />
 	</head>
 	<body>
-		<div class="nav">
-			<h1>library</h1>
-			<div class="login">
-				<button id="btn-login">Log in</button>
-				<div class="accInfos">
-					<h2 id="accAddress">Address:</h2>
-					<h2 id="accBalance">Balance:</h2>
+		<div class="header">
+			<div class="header-title">
+				<img
+					src="https://img.freepik.com/premium-photo/books-with-stairs-sky-with-cloudsgenerative-ai_391052-11895.jpg"
+				/>
+				<div class="header-title-texts">
+					<h1>Librarian</h1>
+					<h6>add and explore books you're looking for</h6>
 				</div>
+			</div>
+			<div class="header-nav">
+				<button id="header-nav-add" type="button">Add</button>
+				<button id="header-nav-see" type="button">See</button>
 			</div>
 		</div>
 		<div class="main">
-			<form id="form">
-				<label>Add book</label>
-				<div class="inputs">
-					<input
-						id="input-book-title"
-						type="text"
-						placeholder="Title"
-					/>
-					<input
-						id="input-book-author"
-						type="text"
-						placeholder="Author"
-					/>
-					<input
-						id="input-book-pages"
-						type="number"
-						placeholder="Pages"
-					/>
-					<button id="btn-save" type="button">Save</button>
+			<div class="main-first_word">
+				<div class="main-first_word-word">
+					<p>YOU HAVE TO LIVE YOUR LIFE LIKE YOU'LL NEVER BE SORRY</p>
 				</div>
-			</form>
+				<div class="main-first_word-image">
+					<img
+						src="https://m.media-amazon.com/images/I/71jAhTHqOGL._AC_UF1000,1000_QL80_.jpg"
+					/>
+				</div>
+			</div>
+			<div class="main-second_word">
+				<div class="main-second_word-image">
+					<img
+						src="https://mysleepyhead.com/media/catalog/product/j/i/jigsw_3.jpg"
+					/>
+				</div>
+				<div class="main-second_word-word">
+					<p>YOU ARE STRONGER THAN YOU BELIEVE</p>
+				</div>
+			</div>
 		</div>
-		<div class="footer">Copyright © github.com/seojunchian</div>
-		<script type="module" src="./javascripts/script.js"></script>
+		<div class="footer">github.com/seojunchian</div>
 	</body>
+	<script type="module" src="./javascripts/index.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </html>

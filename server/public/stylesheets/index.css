@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Slab&display=swap");
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Josefin Slab";
+}
+
+body {
+	background: #789461;
+}
+
+.header {
+	display: flex;
+	background: #dbe7c9;
+	padding: 20px;
+}
+
+.header .header-title {
+	display: flex;
+	align-items: center;
+	margin-left: 40px;
+}
+
+.header .header-title img {
+	height: 100px;
+}
+
+.header .header-title .header-title-texts {
+	width: 200px;
+	color: #294b29;
+	margin-left: 10px;
+}
+
+.header .header-title .header-title-texts h1 {
+	font-size: 3.2em;
+	font-weight: 500;
+}
+
+.header .header-title .header-title-texts h6 {
+	font-size: 1.2em;
+	font-weight: 500;
+}
+
+.header .header-nav {
+	display: flex;
+	align-items: center;
+	margin-left: 175px;
+}
+
+.header .header-nav button {
+	margin: 0 10px;
+	width: 150px;
+	height: 40px;
+	border: none;
+	border-radius: 10px;
+	font-size: 1.1em;
+	cursor: pointer;
+}
+
+.main {
+}
+
+.main .main-first_word {
+	display: flex;
+	align-items: center;
+}
+
+.main .main-first_word .main-first_word-word {
+	display: flex;
+	align-items: center;
+}
+
+.main .main-first_word .main-first_word-word p {
+	text-align: center;
+	font-size: 5em;
+	font-family: "Josefin Slab";
+	color: #294b29;
+}
+
+.main .main-first_word .main-first_word-image {
+	margin: 50px;
+}
+
+.main .main-first_word .main-first_word-image img {
+	border-radius: 20px;
+	width: 700px;
+}
+
+.main .main-second_word {
+	display: flex;
+}
+
+.main .main-second_word .main-second_word-image {
+	margin: 50px;
+}
+
+.main .main-second_word .main-second_word-image img {
+	border-radius: 20px;
+	width: 600px;
+}
+
+.main .main-second_word .main-second_word-word {
+	display: flex;
+	align-items: center;
+}
+
+.main .main-second_word .main-second_word-word p {
+	text-align: center;
+	font-size: 5em;
+	font-family: "Josefin Slab";
+	color: #294b29;
+}
+
+.footer {
+	background: #294b29;
+	color: #dbe7c9;
+	text-align: center;
+	font-size: 2em;
+	padding: 10px;
+}
