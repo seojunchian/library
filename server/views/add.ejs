@@ -28,14 +28,12 @@
 				<button id="header-nav-home" type="button">Home</button>
 				<button id="header-nav-see" type="button">Books</button>
 			</div>
+			<form class="header-form" method="post">
+				<input name="header-form-input" id="main-form-input" />
+				<button id="header-form-button" type="submit">Search</button>
+			</form>
 		</div>
 		<div class="main">
-			<form class="main-form_search" method="post">
-				<input name="main_form_search_input" id="main-form-input" />
-				<button id="main-form_search-button" type="submit">
-					Search
-				</button>
-			</form>
 			<form class="main-form_add" method="post">
 				<div class="main-form_add-title">
 					<p>Add book</p>
@@ -46,26 +44,32 @@
 						name="main_form_add_inputs_title"
 						type="text"
 						placeholder="Title"
+						required
 					/>
 					<input
 						id="main-form_add-inputs-author"
 						name="main_form_add_inputs_author"
 						type="text"
 						placeholder="Author"
+						required
 					/>
 					<input
 						id="main-form_add-inputs-page"
 						name="main_form_add_inputs_page"
 						type="number"
 						placeholder="Pages"
+						required
 					/>
-					<button
-						id="main-form_add-inputs-read"
-						name="main_form_add_inputs_read"
-						type="button"
-					>
-						Read
-					</button>
+					<div class="main-form_add-inputs-read" type="button">
+						<label for="main-form_add-inputs-read-input"
+							>Read</label
+						>
+						<input
+							id="main-form_add-inputs-read-input"
+							name="main_form_add_inputs_read_input"
+							type="checkbox"
+						/>
+					</div>
 				</div>
 				<div class="main-form_add-buttons">
 					<button id="main-form_add-buttons-save" type="submit">

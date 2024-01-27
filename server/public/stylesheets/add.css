@@ -63,33 +63,32 @@ body {
 	cursor: pointer;
 }
 
-.main {
-}
-
-.main .main-form_search {
+.header .header-form {
 	display: flex;
 	justify-content: center;
 	width: 500px;
-	margin: 30px auto 0;
+	margin: 30px auto;
 }
 
-.main .main-form_search input {
+.header .header-form input {
 	width: 400px;
 	height: 30px;
 	border-radius: 10px;
 	border: none;
 	margin-right: 10px;
 	outline: none;
-	resize: none;
 }
 
-.main .main-form_search button {
+.header .header-form button {
 	width: 100px;
 	height: 30px;
 	border-radius: 10px;
 	border: none;
 	background: white;
 	cursor: pointer;
+}
+
+.main {
 }
 
 .main .main-form_add {
@@ -115,7 +114,7 @@ body {
 }
 
 .main .main-form_add .main-form_add-inputs input,
-.main .main-form_add .main-form_add-inputs button {
+.main .main-form_add .main-form_add-inputs .main-form_add-inputs-read {
 	text-align: center;
 	margin-top: 7px;
 	border: none;
@@ -123,8 +122,8 @@ body {
 	background: #fff;
 }
 
-.main .main-form_add .main-form_add-inputs button {
-	cursor: pointer;
+.main .main-form_add .main-form_add-inputs .main-form_add-inputs-read {
+	font-size: 0.9em;
 }
 
 .main .main-form_add .main-form_add-buttons {
